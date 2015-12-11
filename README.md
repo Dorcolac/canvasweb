@@ -8,14 +8,14 @@ A website that is providing several *Canvas* related services, soon available at
 * Custom development
 
 #### Checkpoints:
-- Remove DooApp marks ✔
-- Clear header x
-- Clear footer ✔
-- Redesign header x
-- Redesign footer x
-- Import all stuff from DooApp server to local p
-- Make sure all paths are correct p
+- Remove DooApp marks **✔**
+- Clear header **x**
+- Clear footer **✔**
+- Redesign header **x**
+- Redesign footer **x**
+- Import all stuff from DooApp server to local **p**
+- Make sure all paths are correct **p**
 
-Done - ✔
-Not done - x
-Partially done - p
+###### Done - **✔**
+###### Not done - **x**
+###### Partially done - **p**
