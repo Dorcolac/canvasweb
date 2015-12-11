@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" >
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/x-icon" href="http://www.dooapp.net/wp-content/themes/dooapp/images/favicon/favicon.ico" />
+<title>Canvas LMS Installation and configuration | DooApp</title>
+
+<link rel="stylesheet" href="http://www.dooapp.net/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.7.1" type="text/css" media="all" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.dooapp.net/xmlrpc.php" />
+<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Norican&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playball&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="DooApp &raquo; Feed" href="http://www.dooapp.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DooApp &raquo; Comments Feed" href="http://www.dooapp.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DooApp &raquo; Canvas LMS Installation and configuration Comments Feed" href="http://www.dooapp.net/product/canvas_lms_open_source/feed/" />
+<link rel='stylesheet' id='output-css'  href='http://www.dooapp.net/wp-content/plugins/addthis/css/output.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='jigoshop_styles-css'  href='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/css/frontend.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyphoto-css'  href='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/css/prettyPhoto.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='layerslider_css-css'  href='http://www.dooapp.net/wp-content/plugins/LayerSlider22/css/layerslider.css?ver=3.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.dooapp.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rotatingtweets-css'  href='http://www.dooapp.net/wp-content/plugins/rotatingtweets/css/style.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dcwss-css'  href='http://www.dooapp.net/wp-content/plugins/wordpress-social-stream/css/dcwss.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='googleFonts-css'  href='http://fonts.googleapis.com/css?family=Maven+Pro&#038;ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fullpage-css'  href='http://www.dooapp.net/wp-content/themes/dooapp/css/jquery.fullPage.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='examples-css'  href='http://www.dooapp.net/wp-content/themes/dooapp/css/examples.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dooapp-style-css'  href='http://www.dooapp.net/wp-content/themes/dooapp/style.css?ver=4.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-pagination-css-css'  href='http://www.dooapp.net/wp-content/plugins/simple-pagination/css/default.css?ver=2.1.7' type='text/css' media='screen' />
+<script type='text/javascript' src='http://www.dooapp.net/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/js/blockui.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/LayerSlider22/js/layerslider.kreaturamedia.jquery.js?ver=3.6.2'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/LayerSlider22/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.wall.1.3.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.1.5.4.min.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/bootstrap.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/tinyscrollbar.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/jquery.slimscroll.min.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/jquery.fullPage.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/examples.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/jqfloat.min.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/themes/dooapp/js/skip-link-focus-fix.js?ver=4.0.8'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dooapp.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.dooapp.net/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='Product Designer Tool' href='http://www.dooapp.net/product/product-designer/' />
+<meta name="generator" content="WordPress 4.0.8" />
+<link rel='shortlink' href='http://www.dooapp.net/?p=2522' />
+
+<!-- Jigoshop Version: 1.12.1 -->
+<script type="text/javascript">var icl_lang = 'en';var icl_home = 'http://www.dooapp.net/';</script>
+<script type="text/javascript" src="http://www.dooapp.net/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js"></script>
+<meta name="generator" content="WPML ver:2.7.1 stt:1,51;0" />
+<!-- Custom Styling Social Stream -->
+<style type="text/css">
+.stream li.dcsns-twitter .section-intro,.filter .f-twitter a:hover, .wall-outer .dcsns-toolbar .filter .f-twitter a.iso-active{background-color:#4ec2dc!important;}.stream li.dcsns-facebook .section-intro,.filter .f-facebook a:hover, .wall-outer .dcsns-toolbar .filter .f-facebook a.iso-active{background-color:#3b5998!important;}.stream li.dcsns-google .section-intro,.filter .f-google a:hover, .wall-outer .dcsns-toolbar .filter .f-google a.iso-active{background-color:#2d2d2d!important;}.stream li.dcsns-rss .section-intro,.filter .f-rss a:hover, .wall-outer .dcsns-toolbar .filter .f-rss a.iso-active{background-color:#FF9800!important;}.stream li.dcsns-flickr .section-intro,.filter .f-flickr a:hover, .wall-outer .dcsns-toolbar .filter .f-flickr a.iso-active{background-color:#f90784!important;}.stream li.dcsns-delicious .section-intro,.filter .f-delicious a:hover, .wall-outer .dcsns-toolbar .filter .f-delicious a.iso-active{background-color:#3271CB!important;}.stream li.dcsns-youtube .section-intro,.filter .f-youtube a:hover, .wall-outer .dcsns-toolbar .filter .f-youtube a.iso-active{background-color:#DF1F1C!important;}.stream li.dcsns-pinterest .section-intro,.filter .f-pinterest a:hover, .wall-outer .dcsns-toolbar .filter .f-pinterest a.iso-active{background-color:#CB2528!important;}.stream li.dcsns-lastfm .section-intro,.filter .f-lastfm a:hover, .wall-outer .dcsns-toolbar .filter .f-lastfm a.iso-active{background-color:#C90E12!important;}.stream li.dcsns-dribbble .section-intro,.filter .f-dribbble a:hover, .wall-outer .dcsns-toolbar .filter .f-dribbble a.iso-active{background-color:#F175A8!important;}.stream li.dcsns-vimeo .section-intro,.filter .f-vimeo a:hover, .wall-outer .dcsns-toolbar .filter .f-vimeo a.iso-active{background-color:#4EBAFF!important;}.stream li.dcsns-stumbleupon .section-intro,.filter .f-stumbleupon a:hover, .wall-outer .dcsns-toolbar .filter .f-stumbleupon a.iso-active{background-color:#EB4924!important;}.stream li.dcsns-deviantart .section-intro,.filter .f-deviantart a:hover, .wall-outer .dcsns-toolbar .filter .f-deviantart a.iso-active{background-color:#607365!important;}.stream li.dcsns-tumblr .section-intro,.filter .f-tumblr a:hover, .wall-outer .dcsns-toolbar .filter .f-tumblr a.iso-active{background-color:#385774!important;}.stream li.dcsns-instagram .section-intro,.filter .f-instagram a:hover, .wall-outer .dcsns-toolbar .filter .f-instagram a.iso-active{background-color:#413A33!important;}.wall-outer .dcsns-toolbar .filter li a {background:#777;}.dcwss.dc-wall .stream li {
+    -webkit-border-radius: 4px;
+    -moz-box-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+.dcwss.dc-wall .stream li .section-intro {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+</style>
+
+	<style type='text/css'>
+	span.dropcap {
+		display: inline;
+		float: left;
+		margin: 0;
+		padding: .20em .08em 5px 0;
+		#padding: 0.20em 0.08em 4px 0.00em;/* override for Microsoft Internet Explorer browsers*/
+		_padding: 0.20em 0.08em 4px 0.00em; /* override for IE browsers 6.0 and older */	
+		font-size: 3.2em;
+		line-height: .4em;
+		text-transform: capitalize;
+		color: #fbb239;
+		font-family: 'Oswald', sans-serif;
+	}
+	</style>
+			
+<!-- Responsive Select CSS 
+================================================================ -->
+<style type="text/css" id="responsive-select-css">
+.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect{
+	display:none;
+}
+
+@media (max-width: 790px) {
+	.responsiveSelectContainer{
+		border:none !important;
+		background:none !important;
+		box-shadow:none !important;
+		height:auto !important;
+		max-height:none !important;
+		visibility:visible !important;
+	}
+	.responsiveSelectContainer ul, ul.responsiveSelectFullMenu, #megaMenu ul.megaMenu.responsiveSelectFullMenu{
+		display: none !important;
+	}
+	.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect { 
+		display: inline-block; 
+		width:100%;
+	}
+}	
+</style>
+<!-- end Responsive Select CSS -->
+
+<!-- Responsive Select JS
+================================================================ -->
+<script type="text/javascript">
+jQuery(document).ready( function($){
+	$( '.responsiveMenuSelect' ).change(function() {
+		var loc = $(this).find( 'option:selected' ).val();
+		if( loc != '' && loc != '#' ) window.location = loc;
+	});
+	//$( '.responsiveMenuSelect' ).val('');
+});
+</script>
+<!-- end Responsive Select JS -->
+		
+   <script type="text/javascript"> // MERAC EKRANA ZA MOBILNI NE DIRAJ!
+    var winW = 630, winH = 460;
+    if (document.body && document.body.offsetWidth) {
+     winW = document.body.offsetWidth;
+     winH = document.body.offsetHeight;
+    }
+    if (document.compatMode=='CSS1Compat' &&
+        document.documentElement &&
+        document.documentElement.offsetWidth ) {
+     winW = document.documentElement.offsetWidth;
+     winH = document.documentElement.offsetHeight;
+    }
+    if (window.innerWidth && window.innerHeight) {
+     winW = window.innerWidth;
+     winH = window.innerHeight;
+    }
+
+    console.log('Window width = '+winW);
+    console.log('Window height = '+winH);
+ 
+    </script>
+   <script type="text/javascript">
+   jQuery(document).ready(function() {
+ //  jQuery(".navflagleft").on("mouseover", function(){
+   //jQuery('.navflagmiddleleft').animate({
+   // height: "260px"
+   // }, 500 );
+   // jQuery('.ictops').show();
+    //}); //Mouse Over funkcija kraj
+    //jQuery(".navflagleft").on("mouseleave", function(){
+    //jQuery('.navflagmiddleleft').animate({
+    //height: "2px"
+     //}, 500 );
+    //}); // mouse OUT funkcija kraj
+
+//jQuery(".navflagleft").mouseenter(function(){
+  //  jQuery(".navflagmiddleleft").animate({height: "260px"},500);
+//});
+//jQuery(".navflagleft").mouseleave(function(){
+  //  jQuery(".navflagmiddleleft").animate({height:"2px"},500);
+//});
+
+   jQuery(".navflagleft").hover(
+    function() {
+        jQuery('.navflagmiddleleft').stop().animate({height: "260px"},500);
+    },
+    function() {
+        jQuery('.navflagmiddleleft').stop().animate({height:"2px"},500);
+    });
+
+   jQuery(".navflagright").hover(
+    function() {
+        jQuery('.navflagmiddleright').stop().animate({height: "50px"},500);
+        jQuery('.navflagmiddleright a').show();
+    },
+    function() {
+        jQuery('.navflagmiddleright').stop().animate({height:"4px"},500);
+         jQuery('.navflagmiddleright a').hide();
+    });
+
+ 
+
+
+ jQuery(".navflagleft .ictops").on("mouseover", function(){
+  jQuery(this).find(".normalimg").hide();
+  jQuery(this).find(".hoverimg").show();
+  
+    }); //Mouse Over funkcija kraj
+    jQuery(".navflagleft .ictops").on("mouseleave", function(){
+    jQuery(this).find(".normalimg").show();
+  jQuery(this).find(".hoverimg").hide();
+    }); // mouse OUT funkcija kraj
+jQuery(document).ready(function() {
+  var toggle = true;
+
+  jQuery('.navflagleftmain').click(function(event) {
+     if (toggle === true){
+        jQuery(".menudropdownboxgreen").animate( { top: 0 }, { duration: 'slow'});
+        jQuery("#slideshow").animate( { top: 0 }, { duration: 'slow'});
+        jQuery("#header").animate( { height:  740 }, { duration: 'slow'});
+        toggle = false;
+     } else {
+         jQuery(".menudropdownboxgreen").animate( { top: - 190 }, { duration: 'slow'});
+         jQuery("#slideshow").animate( { top: - 158 }, { duration: 'slow'});
+            jQuery("#header").animate( { height: 580 }, { duration: 'slow'});
+         toggle = true;
+     }
+  });
+  //var mobmeni = jQuery('.headerup .headerupleft .navleft ul .responsiveSelectContainer').show();
+  //mobmeni.appendTo('.mobileshow');
+});
+
+
+
+
+   }); // docready kraj
+   </script>
+</head>
+
+<body class="single single-product postid-2522 jigoshop jigoshop-product group-blog">
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1431710607078548&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
+ <div id="wrapmeasurment"> <!-- Wrap Measurment Begins-->
+<div id="page" class="hfeed site">
+		<header id="header" class="site-header" role="banner">
+		  <section class="headerup">
+                <section class="headerupmiddle desktopshow">
+                     <section class="sidecontnav headerupleft">
+                        <section  class="nav navleft">
+                        <ul>
+                          
+                           <div class="responsiveSelectContainer"><ul id="menu-levi-meni-1" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-435"><a title="Home" href="http://www.dooapp.net/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888"><a href="http://www.dooapp.net/services/">Services</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-980"><a href="http://www.dooapp.net/category/projects/">Projects</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" selected="selected">Navigacija</option><option  id="menu-item-435" value="http://www.dooapp.net/">Home</option>
+<option  id="menu-item-888" value="http://www.dooapp.net/services/">Services</option>
+<option  id="menu-item-980" value="http://www.dooapp.net/category/projects/">Projects</option>
+</select></div>                        </ul>
+                         <div class="clearfix"></div>
+                        </section>
+                       
+                      </section>
+                      <section class="headerupmiddlemiddle">
+                         <a href="/"><img src="http://www.dooapp.net/wp-content/themes/dooapp/images/logobig.png" class="logomain" alt="DooApp Logo"></a>
+                      </section>
+                        <section class="sidecontnav headerupright">
+                           <section class="navflagobx">
+                            <div class="navflag navflagleft">
+                              <div class="navflagleftshadow"></div>
+                              <div class="navflagmiddleleft">
+                               			<div class="textwidget"><a href="https://twitter.com/DooAppNet" title="Pratite nas na twitteru" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/twitteric.png" alt="Pratite nas na twitteru" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/twitterichover.png" alt=""  class="hoverimg"/>
+</a>
+<a href="http://pinterest.com/dooapp/" title="Pratite nas na pinterestu" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/pinterestic.png" alt="Pratite nas na pinterestu" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/pinterestichover.png" alt=""  class="hoverimg"/>
+</a>
+
+<a href="http://www.facebook.com/dooapp.net" title="Posetite nas na facebook-u" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/fb.fw_.png" alt="Posetite nas na facebook-u" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/fbhover.fw_.png" alt="Posetite nas na facebook-u"  class="hoverimg"/>
+</a>
+
+<a href="" title="Svratite na nas youtube kanal" class="ictops"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/youtube.fw_.png" alt="Svratite na nas youtube kanal" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/youtubehover.fw_.png" alt="Svratite na nas youtube kanal"  class="hoverimg"/>
+</a>
+<a href="
+https://plus.google.com/b/103494206280722666147/103494206280722666147/posts" title="Pratite nas na G+" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/google.fw_.png" alt="" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/googlehover.fw_.png" alt="Pratite nas na G+"  class="hoverimg"/>
+</a>
+
+<a href="https://vimeo.com/user16259535" title="Pratite nas na vimeu" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/vimeo.fw_.png" alt="" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/vimeohover.fw_2.png" alt="Pratite nas na vimeu"  class="hoverimg"/>
+</a></div>
+		                              </div>
+                              <div class="navflagleftmain"></div>
+                            </div>
+                             <div class="navflag navflagright">
+                              <div class="navflagrightshadow"></div>
+                              <div class="navflagmiddleright"><div class="fspacer"></div><a href="">SR</a></div>
+                              <div class="navflagrightmain"><div class="fspacer"></div><a href="">EN</a></div>
+                            </div>
+                           </section>
+                          <section  class="nav navright">
+                            <div class="responsiveSelectContainer"><ul id="menu-desni-meni-1" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2586"><a href="http://www.dooapp.net/products/">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-857"><a title="The team" href="http://www.dooapp.net/team/">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-861"><a title="Contact us" href="http://www.dooapp.net/contact/">Contact</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" selected="selected">Navigacija</option><option  id="menu-item-2586" value="http://www.dooapp.net/products/">Products</option>
+<option  id="menu-item-857" value="http://www.dooapp.net/team/">Team</option>
+<option  id="menu-item-861" value="http://www.dooapp.net/contact/">Contact</option>
+</select></div>                             
+                          </section>
+                        </section>
+                </section>
+
+                 <section class="headerupmiddle mobileshow">
+                        <section  class="nav navleft">
+                           <div class="responsiveSelectContainer"><ul id="menu-levi-meni-3" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-435"><a title="Home" href="http://www.dooapp.net/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888"><a href="http://www.dooapp.net/services/">Services</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-980"><a href="http://www.dooapp.net/category/projects/">Projects</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" selected="selected">Navigacija</option><option  value="http://www.dooapp.net/">Home</option>
+<option  value="http://www.dooapp.net/services/">Services</option>
+<option  value="http://www.dooapp.net/category/projects/">Projects</option>
+</select></div>                         <div class="clearfix"></div>
+                        </section>
+                      <section class="headerupmiddlemiddlemob">
+                        <img src="http://www.dooapp.net/wp-content/themes/dooapp/images/logomalimob.png" class="logomalimob" alt="DooApp Logo">
+                               <img src="http://www.dooapp.net/wp-content/themes/dooapp/images/logobig.png" class="logomainmob" alt="DooApp Logo"> 
+                      </section>
+                      <section class="navflagobx">
+                            <div class="navflag navflagleft">
+                              <div class="navflagleftshadow"></div>
+                              <div class="navflagmiddleleft"></div>
+                              <div class="navflagleftmain"></div>
+                            </div>
+                           </section>
+                          <section  class="nav navright">
+                              <div class="responsiveSelectContainer"><ul id="menu-desni-meni-3" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2586"><a href="http://www.dooapp.net/products/">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-857"><a title="The team" href="http://www.dooapp.net/team/">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-861"><a title="Contact us" href="http://www.dooapp.net/contact/">Contact</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" selected="selected">Navigacija</option><option  value="http://www.dooapp.net/products/">Products</option>
+<option  value="http://www.dooapp.net/team/">Team</option>
+<option  value="http://www.dooapp.net/contact/">Contact</option>
+</select></div>                     </section>
+                </section>
+    <div class="responsiveSelectContainer"><ul id="menu-mobilni-meni-1" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-830"><a href="http://www.dooapp.net/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="http://www.dooapp.net/services/">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1544"><a href="http://www.dooapp.net/products/">Products</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-831"><a href="http://www.dooapp.net/category/projects/">Projects</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1545"><a href="http://www.dooapp.net/category/dooapp-pise/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.dooapp.net/team/">DooApp Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1546"><a href="http://www.dooapp.net/social/">Our Social Life &#038; Things We Love</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"><a href="http://www.dooapp.net/contact/">Contact Us</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" selected="selected">Navigacija</option><option  id="menu-item-830" value="http://www.dooapp.net/">Home</option>
+<option  id="menu-item-828" value="http://www.dooapp.net/services/">Services</option>
+<option  id="menu-item-1544" value="http://www.dooapp.net/products/">Products</option>
+<option  id="menu-item-831" value="http://www.dooapp.net/category/projects/">Projects</option>
+<option  id="menu-item-1545" value="http://www.dooapp.net/category/dooapp-pise/">Blog</option>
+<option  id="menu-item-829" value="http://www.dooapp.net/team/">DooApp Team</option>
+<option  id="menu-item-1546" value="http://www.dooapp.net/social/">Our Social Life &#038; Things We Love</option>
+<option  id="menu-item-833" value="http://www.dooapp.net/contact/">Contact Us</option>
+</select></div>                <!-- <select class="selectmob">
+                    <option value="Home">Home</option>
+                    <option value="About">About</option>
+                    <option value="Meet The Team">Meet The Team</option>
+                    <option value="Portfolio">Portfolio</option>
+                    <option value="Blog">Blog</option>
+                    <option value="Contact">Contact</option>
+               </select> -->
+            </section>
+<section class="menudropdownboxgreen">
+			<div class="textwidget"><a href="https://twitter.com/DooAppNet" title="Pratite nas na twitteru" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/twitteric.png" alt="Pratite nas na twitteru" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/twitterichover.png" alt=""  class="hoverimg"/>
+</a>
+<a href="http://pinterest.com/dooapp/" title="Pratite nas na pinterestu" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/pinterestic.png" alt="Pratite nas na pinterestu" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/pinterestichover.png" alt=""  class="hoverimg"/>
+</a>
+
+<a href="http://www.facebook.com/dooapp.net" title="Posetite nas na facebook-u" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/fb.fw_.png" alt="Posetite nas na facebook-u" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/fbhover.fw_.png" alt="Posetite nas na facebook-u"  class="hoverimg"/>
+</a>
+
+<a href="" title="Svratite na nas youtube kanal" class="ictops"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/youtube.fw_.png" alt="Svratite na nas youtube kanal" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/youtubehover.fw_.png" alt="Svratite na nas youtube kanal"  class="hoverimg"/>
+</a>
+<a href="
+https://plus.google.com/b/103494206280722666147/103494206280722666147/posts" title="Pratite nas na G+" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/google.fw_.png" alt="" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/googlehover.fw_.png" alt="Pratite nas na G+"  class="hoverimg"/>
+</a>
+
+<a href="https://vimeo.com/user16259535" title="Pratite nas na vimeu" class="ictops" target="blank"><img src="http://www.dooapp.net/wp-content/uploads/2013/04/vimeo.fw_.png" alt="" class="normalimg" />
+<img src="http://www.dooapp.net/wp-content/uploads/2013/04/vimeohover.fw_2.png" alt="Pratite nas na vimeu"  class="hoverimg"/>
+</a></div>
+		           </section>
+            <section class="menudropdownbox homedropbox">
+           </section>
+	</header><!-- #masthead --> <!--Header ENDS -->
+
+</div>
+
+
+
+<div class="clearfix"></div>
+
+
+		<div class="clear"></div>
+
+
+	<div class="omot_proizvoda ">
+
+		
+		<div id="post-2522" class="post-2522 product type-product status-publish has-post-thumbnail hentry">
+
+			<h1 class="name_product">Canvas LMS Installation and configuration</h1>
+			<h6 class="tagline_product">Installation and custom modules and extensions</h6>
+
+			<div class="row-fluid">
+
+				<div class="span5 opis_producta">
+
+					This Learning Management System that has a revolutionary easy to use interface and amazing features for traditional and new ways of learning, comes in two different flavors. First one is an Instructure hosted cloud service. However, as this is an&hellip; 
+
+					<div class="instalation_and_config"><a href="/product/canvas_lms_open_source/?add-to-cart=2522&#038;_n=d2cfd5445c" class="icon_cart" rel="nofollow"><p>buy product</p></a></div>
+			<!-- 		<div class="wrap_buy">
+						<a href="" class="icon_cart" rel="nofollow"><p></p><div class="buy_button"></div></a>
+					</div> -->
+					<!-- <div class="wrap_plugins row-fluid">
+						<a href="#plugins"><div class="span5 plugins"><p></p></div></a>
+						<a href="#moduls"><div class="span5 custom_module"><p></p></div></a>
+					</div>
+
+					<div class="or"></div>
+									 -->
+						<!-- <div class="scroll_down"></div>
+						<div class="text_scrpll"><p><//?php _e('Scroll down<br> to learn more', 'dooapp'); ?></p></div> -->
+	
+
+				</div>
+
+				<div class="span7 slika_pr"> 
+					<div class="images slike_glavne"><a href="http://www.dooapp.net/wp-content/uploads/2014/08/manja.png" class="zoom" rel="thumbnails"><img width="603" height="351" src="http://www.dooapp.net/wp-content/uploads/2014/08/manja.png" class="attachment-730x400 wp-post-image" alt="manja" /></a><div class="thumbnails"><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/attendance.png" title="attendance" class="zoom first"><img width="90" height="56" src="http://www.dooapp.net/wp-content/uploads/2014/08/attendance-90x56.png" class="attachment-90x90" alt="attendance" /></a><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/attendence_mockup_02_02.png" title="attendence_mockup_02_02" class="zoom "><img width="90" height="60" src="http://www.dooapp.net/wp-content/uploads/2014/08/attendence_mockup_02_02-90x60.png" class="attachment-90x90" alt="attendence_mockup_02_02" /></a><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/weekly.png" title="weekly" class="zoom last"><img width="90" height="60" src="http://www.dooapp.net/wp-content/uploads/2014/08/weekly-90x60.png" class="attachment-90x90" alt="weekly" /></a><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/setup_large.png" title="setup_large" class="zoom first"><img width="90" height="52" src="http://www.dooapp.net/wp-content/uploads/2014/08/setup_large-90x52.png" class="attachment-90x90" alt="setup_large" /></a><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/dates.jpg" title="dates" class="zoom "><img width="90" height="59" src="http://www.dooapp.net/wp-content/uploads/2014/08/dates-90x59.jpg" class="attachment-90x90" alt="dates" /></a><a rel="prettyPhoto[product-gallery]" href="http://www.dooapp.net/wp-content/uploads/2014/08/weekly.jpg" title="weekly" class="zoom last"><img width="90" height="50" src="http://www.dooapp.net/wp-content/uploads/2014/08/weekly-90x50.jpg" class="attachment-90x90" alt="weekly" /></a></div></div> <!-- slika proizvoda -->
+				</div>
+			</div>
+
+	
+
+			<!-- opis proizvoda -->
+
+		</div>
+
+		
+			</div>
+	
+
+</div></div>
+
+	
+			<div id="content" class="content_prozivod_stranice">	
+			<!--- BIRANJE PRIKAZIVANJE POLJA SA 3 OPCIJE -->
+				<section id="section-1" class="crna_sekcija ">
+					<div class="contenttopwrap row-fluid clearfix wrapic" id="where_4">
+							<p>Canvas LMS is rapidly becoming one of the most valuable educational tools. This Learning Management System that has a revolutionary easy to use interface and amazing features for traditional and new ways of learning, comes in two different flavors. First one is an Instructure hosted cloud service. However, as this is an Open Source software, it is possible also to install it on your own server for free.</p>
+<p>WHY THE SECOND OPTION IS NOT SO COMMON?</p>
+<p>Because the installation and configuration of the software is not easy, not well documented, and requires significant expertise. Some of the interesting features like media recordings, live webinars and similar, depend also on the third party Open Source software (like Kaltura, BigBlueButton, etc) which is also hard to install and configure to work with Canvas LMS. There are few bits of functionality that are not released as Open Source (Attendance module –Roll Call, Mobile applications for iOS and Android and Chat module) and therefore can’t be used with community version of Canvas LMS. You don’t have any support.</p>
+<p><strong>If you don’t have a budget to afford Cloud hosted Canvas LMS for your University, High School or<br />
+Company, or you like to have your data on a private server with full control, we can help you with the following services:</strong></p>
+						<div class="row-fluid">
+							<div class="span4 boxic box_1">
+								<div class="box_one"></div>
+																<div class="wrap_custom_timeline"><span class="custom_tagline">Canvas LMS Open Source <br> Installation and configuration</span></div>
+								<br>
+								<div class="custom_image"></div>
+							</div>
+							<div class="span4 boxic box_2">
+								<div class="box_two"></div>
+																<div class="wrap_custom_timeline"><span class="custom_tagline">Plugins and modules</span></div>
+								<div class="custom_image_2"></div>
+
+							</div>
+							<div class="span4 boxic box_3">
+								<div class="box_three"></div>
+																<div class="wrap_custom_timeline"><span class="custom_tagline">Custom development</span></div>
+								<div class="custom_image_3"></div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--- PRVA SEKCIJA POOIZVODA -->
+				<section id="section-2" class="siva_sekcija">
+					<div class="contenttopwrap row-fluid clearfix wrapic" id="where_1">
+						<div class="dark"></div>
+												<div class="wrap_custom_timeline dark_t"><span class="">Canvas LMS Open Source <br> Installation and configuration</span></div>
+						<div class="hr_line"></div>
+
+						<div class="row-fluid clearfix">
+							<div class="span6">
+																<p class="opis_prve_sekcije"><p>We can help you setup and configure Canvas LMS on your own server, or even rent and setup a server for you without worries. We can give you full technical support to configure it for your institution, do a basic branding, optimize for speed and large number of users.<br />
+After your purchase we can install complete software on your server. Installing and configuring can last up to 24 hours. <br />
+We can also setup for you third party Open Source software for you like Kaltura, BigBlueButton or anything else that Canvas LMS relies on, in order to get the same great features as hosted version, and even more. </p>
+<h1 class="h1_opis_sekcije">Benefits</h1>
+<p> • No monthly charges per student – only one-time fee<br />
+ • Significantly lower costs<br />
+ • Dedicated technical support team<br />
+ • All data remains on your private server<br />
+ • Possibility of custom extensions or configurations of the system<br />
+ • Third party services (like Kaltura) also in Open Source versions and free of charge </p>
+</p>
+
+							</div>
+							<div class="span6">
+								<div class="slike_prve_sekcije">
+								
+										<img class="opis_1_img" src="http://www.dooapp.net/wp-content/uploads/2014/08/setup_large.png" alt="" />
+
+																	</div>
+								<a href="/product/canvas_lms_open_source/?add-to-cart=2522&#038;_n=d2cfd5445c" class="icon_cart" rel="nofollow"><div class="kupi_proizvod">Buy now</div></a>
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!--- DRUGA SEKCIJA POOIZVODA -->
+				<section id="section-3" class="bela_sekcija ">
+					<div class="contenttopwrap row-fluid clearfix wrapic" id="where_2">
+						<div class="dark_two"></div>
+												<div class="wrap_custom_timeline dark_t"><span class="">Plugins and modules</span>
+							<div class="tagline_section_2">
+																<p class="tagline_sekcije_2">We are developing modules and plugins for Canvas LMS. </p>
+							</div>
+						</div>
+
+						<div class="hr_line"></div>
+
+						<div class="row-fluid clearfix" id="aj_oei">
+							<div class="span6">
+																<p class="opis_prve_sekcije"><h1 class="h1_opis_sekcije">ATTENDANCE MODULE</h1>
+<p><span class="note_section">Track your students’ attendance using the open source Canvas LMS.</span></p>
+<h1 class="h1_opis_sekcije">Features:</h1>
+<p> • Easily schedule live class sessions for every module<br />
+ • Mark students as late or absent<br />
+ • Enter only if absent or late – by default everybody is present<br />
+ • Notify students of recorded absence (warning message)<br />
+ • Mark absence with just one click<br />
+ • Set a maximum allowed absence with automatically calculated percentage warnings for each student.</p>
+<h1 class="h1_opis_sekcije">COMING SOON!</h1>
+<p> • Check-in tool – let students check in themselves when they are in the class<br />
+ • Set up a seating chart<br />
+ • Monitor what students see on their screens</p>
+<p><a href="/product/attendance-module/?add-to-cart=2585&#038;_n=dde2cb7ae3"></p>
+<p class="kupi_plugin">Buy now</p>
+<p></a></p>
+</p>
+
+							</div>
+							<div class="span6">
+								<div class="slike_prve_sekcije">
+									
+									<img class="opis_1_img" src="http://www.dooapp.net/wp-content/uploads/2014/08/attendence_mockup_02_02.png" alt="" />
+
+															</div>
+							<div class="wrap_cena_custom">
+								<div class="ticket_buy">US <span class="price">499 &euro;</span></div>
+								<p class="cena_custom"></p>
+							</div>
+
+							<a href="/product/canvas_lms_open_source/?add-to-cart=2522&#038;_n=d2cfd5445c" id="id_first2522" class="icon_cart" rel="nofollow"><div class="kupi_proizvod custom_proizvod">Buy now</div></a>
+						</div>
+					</div>
+
+
+					<div class="row-fluid clearfix" id="aj_oei2">
+						
+						<div class="span6">
+							<div class="slike_prve_sekcije">
+								
+								<img class="opis_1_img" src="http://www.dooapp.net/wp-content/uploads/2014/08/weekly.png" alt="" />
+
+													</div>
+						<div class="wrap_cena_custom">
+							<div class="ticket_buy">US <span class="price">499 &euro;</span></div>
+							<p class="cena_custom"></p>
+						</div>
+
+						<a href="/product/canvas_lms_open_source/?add-to-cart=2522&#038;_n=d2cfd5445c" id="id_second2522" class="icon_cart" rel="nofollow"><div class="kupi_proizvod custom_proizvod">Buy now</div></a>
+					</div>
+
+					<div class="span6">
+												<p class="opis_prve_sekcije"><h1 class="h1_opis_sekcije">WEEKLY BREAKDOWN MODULE</h1>
+<p><span class="note_section">Schedule topics for every live session and have a weekly breakdown of the whole module.</span></p>
+<h1 class="h1_opis_sekcije">Features:</h1>
+<p> • Easily set the sessions or automatically pull them from the Attendance module<br />
+ • Enter the title and description for every lecture<br />
+ • If you have several teachers on the same module, track which teacher is teaching what class<br />
+ • Get the reports on how many classes each teacher had<br />
+ • Optionally publish sessions into the module calendar together with the session description, so that students have a class schedule in the calendar</p>
+</p>
+<p><a href="/product/weekly-breakdown-module/?add-to-cart=2597&#038;"></p>
+<p class="kupi_plugin">Buy now</p>
+<p></a></p>
+</p>
+
+					</div>
+				</div>
+
+				<div class="row-fluid clearfix">
+					<div class="span12 comming_soon">
+												<p><p><span class="note_section"</p>
+<p><span class="comming_note">Comming soon!</span></p>
+<p></span></p>
+<h1 class="h1_opis_sekcije">CLASSROM MANAGEMENT</h1>
+<p>Have a full classroom management solution inside of canvas. You have a lot of classrooms? You need a tool to schedule and check availability of the classrooms? Visually schedule classrooms and get reports &#8211; which classes are in which classroom, which teacher, which group.<br />
+If you are interested in this module, please leave your email address, and speed up the development. </p>
+<h1 class="h1_opis_sekcije">MOBILE APPLICATION FOR iOS, Android and Windows Mobile</h1>
+<p>Help your students learn and get information on the go. Mobile applications for phones and tablets that will work with Open Source Canvas LMS. If you are interested in this module, please leave your email address, and speed up the development. </p>
+<h1 class="h1_opis_sekcije">CHAT MODULE</h1>
+<p>Let your students and teachers have live discussions, give them live feedback and reduce the amount of feedback needed by enforcing live communication.If you are interested in this module, please leave your email address, and speed up the development.</p>
+</p>
+					</div>
+
+				</div>
+
+				</div>
+			</section>
+
+			<!--- TRECA SEKCIJA POOIZVODA -->
+
+			<section id="section-4" class="siva_sekcija">
+				<div class="contenttopwrap row-fluid clearfix wrapic" id="where_3">
+					<div class="dark_three"></div>
+										<div class="wrap_custom_timeline dark_t">
+						<span class="">Custom development</span>
+						<div class="hr_line"></div>
+					</div>
+
+					<div class="row-fluid clearfix">
+						<div class="span7">
+														<p class="opis_prve_sekcije"><p>If you are interested in the development of a completely custom extension, like an additional learning tool, integration to any third party service, a special management or reporting tool that will suit a better your way of work and teaching, almost anything is possible. You can imagine whatever you want, just tell us about your idea and we’ll take care of the rest.<br />
+We are a team of developers and designers working on some of the most challenging worldwide projects. You can get a professional service with an experienced creative team working for you.<br />
+Please describe what you would like and we will contact you. </p>
+</p>
+
+						</div>
+						<div class="span5">
+							<div class="product_qoute">
+								<p class="get_in_touch">get in touch with us</p>
+								<div class="at"></div>
+								<p class="dooappdo">DooApp</p>
+								<p class="pra">We are looking forward working with you!</p>
+								<a class="doo_btn get_product_qoute" href="/get-the-quote/">GET A QUOTE</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+
+		</div>
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function() { 
+
+		// jQuery(".instalation_and_config, .box_1").click(function() {
+		// 	jQuery('html, body').animate({
+		// 		scrollTop: jQuery('#where_1').offset().top
+		// 	}, 2000);
+		// })
+
+		jQuery(".plugins, .box_2").click(function() {
+			jQuery('html, body').animate({
+				scrollTop: jQuery('#where_2').offset().top
+			}, 2000);
+		})
+
+		jQuery(".custom_module, .box_3").click(function() {
+			jQuery('html, body').animate({
+				scrollTop: jQuery('#where_3').offset().top
+			}, 2000);
+		})
+
+		jQuery(".scroll_down").click(function() {
+			jQuery('html, body').animate({
+				scrollTop: jQuery('#where_4').offset().top
+			}, 2000);
+		})
+
+	});
+</script>
+
+				<!--- THANK YOU SEKCIJA POOIZVODA -->
+
+		<section id="section-5" class="crvena_sekcija">
+			<div class="contenttopwrap row-fluid clearfix wrapic" id="where_3">
+				<div class="tagline_section_2">
+					<p class="tagline_sekcije_2 white thank_yu">Thank you</p>
+					<div class="hr_line white_hr"></div>
+					<div class="wrap_custom_timeline dark_t white"><span class="">Share</span></div>
+				</div>
+
+
+
+				<div class="row-fluid clearfix">
+					<div class="span12">
+						<div class="social_share_product">
+							<span class="fb_icon"> <div class="fb-share-button fb_icon" data-href="http://www.dooapp.net" data-width="40" style="opacity:0; height:50px;padding-top:10px;"></div></span>
+							<span class="tw_icon ">
+								<a href="https://twitter.com/share" class="tw_icon" style="opacity:0 !important;" data-via="DooAppNet" data-count="none"></a>
+							</span>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+							<span class="pt_icon"></span>
+							<span class="gp_icon"></span>
+						</div>
+
+						<!-- <div class="clearfix"></div> -->
+					</div>
+
+				</div>
+			</section>
+
+<footer> <!--Footer Begins -->
+              <div class="footertop">
+                <div class="footertopmiddle"><div class="gototoparrow"></div></div>
+            </div>
+            <section class="footerbottomwrap2">
+              <section class="footerbottomwrap row-fluid clearfix"> <!-- COntent Bottom WRAP Begins -->
+             
+     <section class="span4 articlewrapfooter">
+
+                <h4 class="footerheadingmain">Recent Tweets</h4>
+
+                   <div class="twboxtemp">
+                    <h4 class="twheading"><a href="https://twitter.com/DooAppNet‎">DooApp Twitter</a></h4>
+                    <div class="rotatingtweets_nextprev"><a href="#" class="rotatingtweets_4000_scrollUp_566a0dc339da9_rtw_prev rtw_prev">prev</a> &middot; <a href="#" class="rotatingtweets_4000_scrollUp_566a0dc339da9_rtw_next rtw_next">next</a></div>
+<div class='rotatingtweets rotatingtweets_format_0' id='rotatingtweets_4000_scrollUp_566a0dc339da9'>
+	<div class = 'rotatingtweet'>
+		<p class='rtw_main'>We made it! <a href='http://t.co/rzCk4v8YCl' title='http://fb.me/7ogOjxNvf'>fb.me/7ogOjxNvf</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/588040724131815424">About 9 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>:) <a href='http://t.co/tQ8lFoJ1qe' title='http://fb.me/7poZYKW8T'>fb.me/7poZYKW8T</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/583293697414045696">About 9 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href='http://t.co/zat4KxSY32' title='http://fb.me/3zN9RhiUo'>fb.me/3zN9RhiUo</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/582249166706843648">About 9 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>The team of young scientists and astrophysicists was in the right place at the right time</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/578879947386658816">About 9 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Novi DooApp drugar <a href='http://t.co/52ikxlDb8i' title='http://fb.me/7wXkMUtV6'>fb.me/7wXkMUtV6</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/577870714830659584">About 10 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Thanks to Pas - Vaš Najbolji Magazin .</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/567648675024076801">About 11 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>We have one very happy account manager, happy birthday! :)</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/566208420450406401">About 11 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Dooapp on ice...ice baby <a href='http://t.co/JDIfQ6Ny1c' title='http://fb.me/42m94hBEP'>fb.me/42m94hBEP</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/565142832789614592">About 11 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Coders will know ;) Mashable <a href='http://t.co/wYKL4i4NWe' title='http://fb.me/32XpufKxs'>fb.me/32XpufKxs</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/560081961620742144">About 11 months ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Our office is sparkling :) <a href='http://t.co/IjNjNVCXJr' title='http://fb.me/3MN8XVJDB'>fb.me/3MN8XVJDB</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/547490490971480065">Last year</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>How do you like our HotSport makeover? :)</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534734061961752576">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>How do you like our HotSport makeover? ;)</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534715766818746368">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href='http://t.co/DzBAQWvEv6' title='http://fb.me/2PY8BmU60'>fb.me/2PY8BmU60</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534691540564992000">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href='http://t.co/fk9zKg4RsY' title='http://fb.me/6TuBwpmBB'>fb.me/6TuBwpmBB</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534664835695648769">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href='http://t.co/Yb5tFq8wR2' title='http://fb.me/3exc92aJB'>fb.me/3exc92aJB</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534647013519147008">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href="http://twitter.com/search?q=%23hotsport&amp;src=hash" title="#hotsport">#hotsport</a>  HotSport.rs birthday party!</p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/534433470681219072">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>We had a great time at Belgrade Behance Reviews with Nina from SAE Institut Beograd ! <a href='http://t.co/L4zvZR3HIH' title='http://fb.me/78WehhLRv'>fb.me/78WehhLRv</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/533245181089574914">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'><a href='http://t.co/cDbPJnIu9V' title='http://fb.me/42vXz2xHi'>fb.me/42vXz2xHi</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/533235206690701313">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Enough coding for today! <a href='http://t.co/Pfm59ca43f' title='http://fb.me/1S4BpKgxk'>fb.me/1S4BpKgxk</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/530782918600564736">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+	<div class = 'rotatingtweet' style='display:none'>
+		<p class='rtw_main'>Our captain and crew <a href='http://t.co/yt2fERch01' title='http://fb.me/73t3qW97v'>fb.me/73t3qW97v</a></p>
+		<p class='rtw_meta'><a  href="https://twitter.com/twitterapi/status/528838035644112897">About a year ago</a> from <a href='https://twitter.com/intent/user?user_id=1134529735' title='DooApp'>DooApp's Twitter</a> via <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></p></div>
+</div>
+<div class='rtw_follow follow-button'><a href='http://twitter.com/DooAppNet' class='twitter-follow-button' title='Follow @DooAppNet' data-lang='en'>Follow @DooAppNet</a></div>
+
+
+
+
+                 </div>
+                  
+
+
+
+
+
+
+
+              </section>
+
+   
+     <section class="span4 articlewrapfooter">
+
+                <h4 class="footerheadingmain">Follow us</h4>
+
+                 <section class="socialnetworkwrap">
+
+                     <section class="socialnetworkiconbox">
+
+                      <a href="http://www.facebook.com/dooapp.net" target="blank" title="Posetite nas na facebook-u"><img src="http://www.dooapp.net/wp-content/themes/dooapp/images/facebook.png" alt="Posetite nas na facebook-u"></a>
+
+                     </section>
+
+                 </section>
+
+                 <section class="socialnetworkwrap">
+
+                     <section class="socialnetworkiconbox">
+
+                      <a href="https://twitter.com/DooAppNet" target="blank" title="Pratite nas na twitteru"><img src="http://www.dooapp.net/wp-content/themes/dooapp/images/twitter.png" alt="Pratite nas na twitteru"></a>
+
+                     </section>
+
+                 </section>
+
+                 <section class="socialnetworkwrap">
+
+                     <section class="socialnetworkiconbox">
+
+                      <a href="#" title="Pratite nas na Pitenerstu"><img src="http://www.dooapp.net/wp-content/themes/dooapp/images/pinteresticon.png" alt="Pratite nas na Pitenerstu"></a>
+
+                     </section>
+
+                 </section>
+
+             </section>
+
+   
+     <section class="span4 articlewrapfooter">
+
+                <h4 class="footerheadingmain">Contact</h4>
+
+                    <h4 class="footersubheading"><a href="http://www.dooapp.net/contact/">Hire us</a></h4>
+
+                    <div class="contactbox">
+
+                    <p class="infotext">Info:</p>
+
+                     <p class="infotext">Kneginje Ljubice 15</p>
+
+                      <p class="infotext">11000 Belgrade, Serbia</p>
+
+                       <p class="infotext">011/262 64 64</p>
+
+                        <p class="infotext">011/3288 152</p>
+
+                      </div>
+
+              </section>
+
+                 </section>
+              <div class="copyrightwrap">
+              <section id="logoboxfooter">
+               <a href="http://www.dooapp.net" title="dooapp logo"><img src="http://www.dooapp.net/wp-content/themes/dooapp/images/dooapp-logo-mali-footer.png" class="dooapp_small_logo" alt="Doo App Small Logo"></a>
+               <a href="http://www.dooapp.net/terms/" title="Terms and Conditions"><p class="copyright">Terms and Conditions</a>&nbsp;|&nbsp;copyright 2013</p>
+             </section>
+           </div>
+           </section>
+          </footer> <!--Footer ENDS -->
+                    <script type="text/javascript">
+       
+        jQuery(document).ready(function() { 
+       jQuery(".gototoparrow").click(function() {
+  jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+     jQuery('.jqfloat').jqFloat({
+        width:10,
+        height:30,
+        speed:1000
+      });
+
+       });
+
+
+          
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40723042-1', 'dooapp.net');
+  ga('send', 'pageview');
+
+</script>
+         </div>     <!-- Wrap Ends -->  
+       </div>
+       <script type="text/javascript">
+
+var addthis_config = {"data_track_clickback":false,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};
+var addthis_product = 'wpp-3.5.9';
+</script><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=5d65c333d49cd193810838f845445e2a"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var jigoshop_params = {"ajax_url":"http:\/\/www.dooapp.net\/wp-admin\/admin-ajax.php","assets_url":"http:\/\/www.dooapp.net\/wp-content\/plugins\/jigoshop","validate_postcode":"no","checkout_url":"http:\/\/www.dooapp.net\/wp-admin\/admin-ajax.php?action=jigoshop-checkout","currency_symbol":"\u20ac","get_variation_nonce":"86589f22c0","load_fancybox":"1","option_guest_checkout":"yes","select_state_text":"Select a state\u2026","state_text":"state","ratings_message":"Please select a star to rate your review.","update_order_review_nonce":"85c352c903","billing_state":"","shipping_state":"","is_checkout":"","error_hide_time":"8000","message_hide_time":"4000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/js/global.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/js/jquery.prettyPhoto.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/jigoshop/assets/js/single-product.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.dooapp.net\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-includes/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-includes/js/comment-reply.min.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/rotatingtweets/js/jquery.cycle.all.min.js?ver=4.0.8'></script>
+<script type='text/javascript' src='http://www.dooapp.net/wp-content/plugins/rotatingtweets/js/rotating_tweet.js?ver=1.7.4'></script>
+<!--wp_footer-->     <!-- Wrap Measurment Ends -->   
+    </body>
+</html> 
