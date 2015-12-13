@@ -12,7 +12,7 @@ A website that is providing several *Canvas* related services, soon available at
 - Clear header **x**
 - Clear footer **✔**
 - Redesign header **x**
-- Redesign footer **x**
+- Redesign footer **p**
 - Import all stuff from DooApp server to local **p**
 - Make sure all paths are correct **p**
 
